@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Credit Risk Prediction for Loan Applicants
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Project Overview:**
 
-## Available Scripts
+Thank you for giving me the opportunity to work on this project. This application aims to predict the credit risk of loan applicants. The goal is to help banks and financial institutions reduce the number of defaults by accurately predicting which applicants present high or low risk. 
 
-In the project directory, you can run:
+We utilize machine learning models such as **Random Forest**, **KNN**, **SVM**, and **Naive Bayes** to make the predictions. The backend is integrated with **React** for the frontend, **Firebase OAuth** for authentication, **Firestore** for storing data, and **Google Cloud** for deployment. This web application helps real-time data collection and evaluates the credit risk of applicants.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Machine Learning Integration:** We use models like Random Forest, KNN, SVM, and Naive Bayes for credit risk prediction.
+- **Real-Time Data:** Firebase Firestore is used to collect and store user data in real-time.
+- **Secure Authentication:** Users log in securely using **Firebase OAuth**.
+- **Analytics and Visualization:** Displays data insights, including a correlational heatmap, and stores user data for future predictions.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Data Pre-Processing and Analytics
 
-### `npm run build`
+- **Handling Missing Values:** Null values are replaced or removed to ensure clean data.
+- **Label Encoding:** Object or string values are converted to numerical values.
+- **Normalization:** Data normalization is applied to improve model accuracy.
+  
+Analytics shows that the dataset consists of **700 good credits** and **300 bad credits**. The **correlational heatmap** helps identify which features are most influential in determining risk. Based on this analysis, irrelevant features like **Sex**, **Purpose**, **Job**, and **Housing** were removed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Model Building
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The following models were tested:
 
-### `npm run eject`
+1. **Random Forest**
+2. **KNN**
+3. **SVM**
+4. **Naive Bayes**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Random Forest** achieved the highest accuracy, as shown in the table below:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Metric       | Random Forest | SVM     | Naive Bayes | KNN    |
+|--------------|---------------|---------|-------------|--------|
+| **Accuracy** | 0.725         | 0.63    | 0.705       | 0.68   |
+| **Precision**| 0.733696      | 0.721854| 0.738372    | 0.7333 |
+| **Recall**   | 0.957447      | 0.77305 | 0.900709    | 0.8581 |
+| **F1 Score** | 0.830769      | 0.746575| 0.811502    | 0.79085|
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Frontend Using React
 
-## Learn More
+The frontend is built using **React**, which interacts with Firebase for authentication and Firestore for real-time data storage. The key features include:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Firebase OAuth Authentication**: Secure login for users.
+- **Firestore Integration**: Real-time storage and retrieval of user data.
+- **Credit Risk Prediction**: Uses the ML backend to classify credit risk as high or low.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
