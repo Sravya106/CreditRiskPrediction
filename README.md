@@ -22,7 +22,7 @@ We utilize machine learning models such as **Random Forest**, **KNN**, **SVM**, 
 - **Label Encoding:** Object or string values are converted to numerical values.
 - **Normalization:** Data normalization is applied to improve model accuracy.
   
-Analytics shows that the dataset consists of **700 good credits** and **300 bad credits**. The **correlational heatmap** helps identify which features are most influential in determining risk. Based on this analysis, irrelevant features like **Sex**, **Purpose**, **Job**, and **Housing** were removed.
+Analytics shows that the dataset consists of **700 good credits** and **300 bad credits**. The **correlational heatmap** helps identify which features are most influential in determining risk. Based on this analysis, irrelevant features like **Sex**, **Purpose**, **Job**, and **Housing** were removed. **This improved accuracy of our models by 4%**
 
 ---
 
